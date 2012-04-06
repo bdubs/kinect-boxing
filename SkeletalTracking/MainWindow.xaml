@@ -7,18 +7,16 @@
     <Canvas Name="MainCanvas">
         <my:KinectColorViewer Canvas.Left="0" Canvas.Top="0" Width="640" Height="480" Name="kinectColorViewer1" 
                               Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" />
-        <Ellipse Canvas.Left="0" Canvas.Top="0" Height="50" Name="leftEllipse"  Width="50" Fill="#FF4D298D" Opacity="1" Stroke="White" />
-        <Ellipse Canvas.Left="100" Canvas.Top="0" Fill="#FF2CACE3" Height="50" Name="rightEllipse" Width="50" Opacity="1" Stroke="White" />
+        <Ellipse Canvas.Left="0" Canvas.Top="0" Height="30" Name="leftEllipse"  Width="30" Fill="#FF4D298D" Opacity="0.15" Stroke="White" />
+        <Ellipse Canvas.Left="100" Canvas.Top="0" Fill="#FF2CACE3" Height="30" Name="rightEllipse" Width="30" Opacity="0.15" Stroke="White" DataContext="{Binding}" />
         <my:KinectSensorChooser Canvas.Left="250" Canvas.Top="380" Name="kinectSensorChooser1" Width="328" />
-        <Ellipse Canvas.Left="447" Canvas.Top="38" Height="82" Name="ellipse1" Stroke="Black" Width="84" Fill="White" />
-        <Label Canvas.Left="569" Canvas.Top="12" Content="Score" Height="38" Name="label1" Width="71" FontSize="22" FontWeight="Bold"/>
-        <Label Canvas.Left="569" Canvas.Top="56" Content="Label" Height="36" Name="label2" Width="71" FontSize="20" FontWeight="Normal" />
-        <Label Canvas.Left="569" Canvas.Top="105" Content="Label" Height="40" Name="label3" FontSize="20" Width="57" />
-        <Label Canvas.Left="569" Canvas.Top="143" Content="Label" Height="36" Name="label4" FontSize="20" Width="57" />
-        <Label Canvas.Left="569" Canvas.Top="185" Content="Label" Height="37" Name="label5" FontSize="20" Width="57" />
-        <Label Canvas.Left="569" Canvas.Top="219" Content="Label" Height="38" Name="label6" FontSize="20" Width="57" />
-        <Label Canvas.Left="569" Canvas.Top="253" Content="Label" Height="35" Name="label7" FontSize="20" Width="57" />
-        <Label Canvas.Left="569" Canvas.Top="294" Content="Label" Height="28" Name="label8" FontSize="20" Width="57"/>
-        <Label Canvas.Left="569" Canvas.Top="346" Content="Label" Height="28" Name="label9" FontSize="20" Width="57"/>
+        <!--<Ellipse Canvas.Left="447" Canvas.Top="38" Height="82" Name="ellipse1" Stroke="Black" Width="84" Fill="White" Visibility="Hidden" />-->
+        <Label Canvas.Left="561" Canvas.Top="0" Content="Score" Height="38" Name="label1" Width="71" FontSize="22" FontWeight="Bold"/>
+        <Label Canvas.Left="561" Canvas.Top="38" Content="0" Height="36" Name="label2" Width="71" FontSize="20" FontWeight="Normal" />
+        <Label Canvas.Left="69" Canvas.Top="180" Content="Please center yourself on the screen" Height="63" Name="warningLabel" FontSize="25" Width="494" Opacity="1" FontWeight="ExtraBold" FontStretch="Normal" Visibility="Hidden" />
+        <Ellipse Canvas.Left="170" Canvas.Top="0" Height="1" Name="chestEllipse" Stroke="Black" Width="1" Opacity="0" />
+        <Rectangle Canvas.Left="239" Canvas.Top="157" Height="51" Name="headWarning" Stroke="Black" Width="55" Fill="Red" Opacity="0.5" Visibility="Hidden" />
+        <Rectangle Canvas.Left="222" Canvas.Top="254" Height="97" Name="bodyWarning" Stroke="Black" Width="96" Fill="Yellow" Opacity="0.5" Visibility="Hidden" />
+        <Image Canvas.Left="187" Canvas.Top="24" Height="60" Name="ellipse1" Stretch="Fill" Width="68" Source="/SkeletalTracking;component/target.png" Visibility="Hidden" />
     </Canvas>
 </Window>
